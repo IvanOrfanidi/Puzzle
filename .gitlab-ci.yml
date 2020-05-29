@@ -1,0 +1,10 @@
+image: gcc
+before_script:
+ - apt-get update --yes
+ - apt-get install --yes qt5-default
+ - apt-get install --yes cmake
+
+build:
+  script:
+  - ./genqt.sh
+  - ./compile.sh
