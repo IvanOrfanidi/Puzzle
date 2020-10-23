@@ -7,6 +7,7 @@ build/*
 !*.hpp
 !*.txt
 !*.ui
+!*.in
 !*.bat
 !*.sh
 !.gitignore
@@ -16,3 +17,4 @@ ui_*
 !*.md
 !*.yml
 build/*.txt
+build/*.h
