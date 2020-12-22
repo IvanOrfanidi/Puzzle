@@ -8,9 +8,8 @@ configure_file(
     project_version.h.in ${CMAKE_CURRENT_BINARY_DIR}/project_version.h
 )
 
-# Option
+# Options
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0")
 
 # Compiler-specific options
 if((CMAKE_CXX_COMPILER_ID MATCHES "GNU") OR (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
@@ -49,6 +48,11 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # For path '<...>'
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+# Set build type
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif(NOT CMAKE_BUILD_TYPE)
+
 # For path to project_version.h
 target_include_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -56,7 +60,8 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 # Link target
-target_link_libraries(${PROJECT_NAME} Qt5::Core)
-target_link_libraries(${PROJECT_NAME} Qt5::Gui)
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME}
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+)
