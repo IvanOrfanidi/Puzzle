@@ -5,4 +5,4 @@ build:
   after_script:
   - cd /media/storage/gitlab/
   - sudo rm -rf Puzzle
-  - git clone http://192.168.109.15/root/Puzzle.git
+  - git clone http://git.home.lan/root/Puzzle.git
