@@ -1,8 +1,8 @@
-#include <project_version.h>
-#include <include/mainwindow.h>
 #include <QApplication>
 #include <cstdint>
+#include <include/mainwindow.h>
 #include <iostream>
+#include <project_version.h>
 #include <string>
 
 std::string parseCommand(int argc, char* argv[])

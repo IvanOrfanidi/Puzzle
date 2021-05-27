@@ -27,7 +27,7 @@ for i in `ls include/*.h`; do
 	if [ -n "$MACRO" ]; then
 		out=$(remove_ext $i)
 		out=$(remove_path $out)
-		out=src/moc_$out.cpp
+		out=source/moc_$out.cpp
 		moc $QTDEFINES $i -o $out
 	fi
 done
