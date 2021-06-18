@@ -14,21 +14,21 @@ MainWindow::MainWindow(QWidget* parent)
     _form->pushButton_0->setVisible(false);
 
     // Binding buttons with signals
-    QObject::connect(_form->pushButton_1, SIGNAL(clicked()), this, SLOT(handleButton1()));
-    QObject::connect(_form->pushButton_2, SIGNAL(clicked()), this, SLOT(handleButton2()));
-    QObject::connect(_form->pushButton_3, SIGNAL(clicked()), this, SLOT(handleButton3()));
-    QObject::connect(_form->pushButton_4, SIGNAL(clicked()), this, SLOT(handleButton4()));
-    QObject::connect(_form->pushButton_5, SIGNAL(clicked()), this, SLOT(handleButton5()));
-    QObject::connect(_form->pushButton_6, SIGNAL(clicked()), this, SLOT(handleButton6()));
-    QObject::connect(_form->pushButton_7, SIGNAL(clicked()), this, SLOT(handleButton7()));
-    QObject::connect(_form->pushButton_8, SIGNAL(clicked()), this, SLOT(handleButton8()));
-    QObject::connect(_form->pushButton_9, SIGNAL(clicked()), this, SLOT(handleButton9()));
-    QObject::connect(_form->pushButton_10, SIGNAL(clicked()), this, SLOT(handleButton10()));
-    QObject::connect(_form->pushButton_11, SIGNAL(clicked()), this, SLOT(handleButton11()));
-    QObject::connect(_form->pushButton_12, SIGNAL(clicked()), this, SLOT(handleButton12()));
-    QObject::connect(_form->pushButton_13, SIGNAL(clicked()), this, SLOT(handleButton13()));
-    QObject::connect(_form->pushButton_14, SIGNAL(clicked()), this, SLOT(handleButton14()));
-    QObject::connect(_form->pushButton_15, SIGNAL(clicked()), this, SLOT(handleButton15()));
+    QObject::connect(_form->pushButton_1, SIGNAL(clicked()), this, SLOT(handlerButton1()));
+    QObject::connect(_form->pushButton_2, SIGNAL(clicked()), this, SLOT(handlerButton2()));
+    QObject::connect(_form->pushButton_3, SIGNAL(clicked()), this, SLOT(handlerButton3()));
+    QObject::connect(_form->pushButton_4, SIGNAL(clicked()), this, SLOT(handlerButton4()));
+    QObject::connect(_form->pushButton_5, SIGNAL(clicked()), this, SLOT(handlerButton5()));
+    QObject::connect(_form->pushButton_6, SIGNAL(clicked()), this, SLOT(handlerButton6()));
+    QObject::connect(_form->pushButton_7, SIGNAL(clicked()), this, SLOT(handlerButton7()));
+    QObject::connect(_form->pushButton_8, SIGNAL(clicked()), this, SLOT(handlerButton8()));
+    QObject::connect(_form->pushButton_9, SIGNAL(clicked()), this, SLOT(handlerButton9()));
+    QObject::connect(_form->pushButton_10, SIGNAL(clicked()), this, SLOT(handlerButton10()));
+    QObject::connect(_form->pushButton_11, SIGNAL(clicked()), this, SLOT(handlerButton11()));
+    QObject::connect(_form->pushButton_12, SIGNAL(clicked()), this, SLOT(handlerButton12()));
+    QObject::connect(_form->pushButton_13, SIGNAL(clicked()), this, SLOT(handlerButton13()));
+    QObject::connect(_form->pushButton_14, SIGNAL(clicked()), this, SLOT(handlerButton14()));
+    QObject::connect(_form->pushButton_15, SIGNAL(clicked()), this, SLOT(handlerButton15()));
 }
 
 MainWindow::~MainWindow()
@@ -36,7 +36,7 @@ MainWindow::~MainWindow()
     delete _form;
 }
 
-void MainWindow::handleAll(QPushButton* button)
+void MainWindow::handler(QPushButton* button)
 {
     const QRect target = _form->pushButton_0->geometry();
     const int top = target.top();
@@ -61,77 +61,77 @@ void MainWindow::handleAll(QPushButton* button)
     }
 }
 
-void MainWindow::handleButton1()
+void MainWindow::handlerButton1()
 {
-    handleAll(_form->pushButton_1);
+    handler(_form->pushButton_1);
 }
 
-void MainWindow::handleButton2()
+void MainWindow::handlerButton2()
 {
-    handleAll(_form->pushButton_2);
+    handler(_form->pushButton_2);
 }
 
-void MainWindow::handleButton3()
+void MainWindow::handlerButton3()
 {
-    handleAll(_form->pushButton_3);
+    handler(_form->pushButton_3);
 }
 
-void MainWindow::handleButton4()
+void MainWindow::handlerButton4()
 {
-    handleAll(_form->pushButton_4);
+    handler(_form->pushButton_4);
 }
 
-void MainWindow::handleButton5()
+void MainWindow::handlerButton5()
 {
-    handleAll(_form->pushButton_5);
+    handler(_form->pushButton_5);
 }
 
-void MainWindow::handleButton6()
+void MainWindow::handlerButton6()
 {
-    handleAll(_form->pushButton_6);
+    handler(_form->pushButton_6);
 }
 
-void MainWindow::handleButton7()
+void MainWindow::handlerButton7()
 {
-    handleAll(_form->pushButton_7);
+    handler(_form->pushButton_7);
 }
 
-void MainWindow::handleButton8()
+void MainWindow::handlerButton8()
 {
-    handleAll(_form->pushButton_8);
+    handler(_form->pushButton_8);
 }
 
-void MainWindow::handleButton9()
+void MainWindow::handlerButton9()
 {
-    handleAll(_form->pushButton_9);
+    handler(_form->pushButton_9);
 }
 
-void MainWindow::handleButton10()
+void MainWindow::handlerButton10()
 {
-    handleAll(_form->pushButton_10);
+    handler(_form->pushButton_10);
 }
 
-void MainWindow::handleButton11()
+void MainWindow::handlerButton11()
 {
-    handleAll(_form->pushButton_11);
+    handler(_form->pushButton_11);
 }
 
-void MainWindow::handleButton12()
+void MainWindow::handlerButton12()
 {
-    handleAll(_form->pushButton_12);
+    handler(_form->pushButton_12);
 }
 
-void MainWindow::handleButton13()
+void MainWindow::handlerButton13()
 {
-    handleAll(_form->pushButton_13);
+    handler(_form->pushButton_13);
 }
 
-void MainWindow::handleButton14()
+void MainWindow::handlerButton14()
 {
-    handleAll(_form->pushButton_14);
+    handler(_form->pushButton_14);
 }
 
-void MainWindow::handleButton15()
+void MainWindow::handlerButton15()
 {
-    handleAll(_form->pushButton_15);
+    handler(_form->pushButton_15);
 }

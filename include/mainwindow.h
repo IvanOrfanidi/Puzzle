@@ -24,22 +24,22 @@ public:
     explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 public slots:
-    void handleAll(QPushButton* button);
-    void handleButton1();
-    void handleButton2();
-    void handleButton3();
-    void handleButton4();
-    void handleButton5();
-    void handleButton6();
-    void handleButton7();
-    void handleButton8();
-    void handleButton9();
-    void handleButton10();
-    void handleButton11();
-    void handleButton12();
-    void handleButton13();
-    void handleButton14();
-    void handleButton15();
+    void handler(QPushButton* button);
+    void handlerButton1();
+    void handlerButton2();
+    void handlerButton3();
+    void handlerButton4();
+    void handlerButton5();
+    void handlerButton6();
+    void handlerButton7();
+    void handlerButton8();
+    void handlerButton9();
+    void handlerButton10();
+    void handlerButton11();
+    void handlerButton12();
+    void handlerButton13();
+    void handlerButton14();
+    void handlerButton15();
 
 private:
     static constexpr auto BUTTON_SIZE = 120;
