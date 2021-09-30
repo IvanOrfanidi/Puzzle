@@ -2,11 +2,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Project name
-project(puzzle VERSION 1.0.3)
-
-configure_file(
-    project_version.h.in ${CMAKE_CURRENT_BINARY_DIR}/project_version.h
-)
+project(puzzle)
 
 # Options
 set(CMAKE_CXX_STANDARD 17)
@@ -14,26 +10,18 @@ set(CMAKE_CXX_STANDARD 17)
 # Compiler-specific options
 if((CMAKE_CXX_COMPILER_ID MATCHES "GNU") OR (CMAKE_CXX_COMPILER_ID MATCHES "Clang"))
     add_compile_options(
-        -Werror
-        -pedantic-errors
-        
         -Wall
+        -Werror
         -Wextra
         -Wpedantic
 
         -Wcast-align
         -Wcast-qual
-        -Wconversion
-        -Wextra-semi
         -Wenum-compare
         -Wfloat-equal
         -Wnon-virtual-dtor
         -Woverloaded-virtual
         -Wredundant-decls
-        -Wold-style-cast
-        -Wsign-promo
-        -Wzero-as-null-pointer-constant
-        -Wsign-conversion
     )
 endif()
 
@@ -53,14 +41,8 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 # For path '<...>'
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-# Set build type
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif(NOT CMAKE_BUILD_TYPE)
-
 # For path to project_version.h
 target_include_directories(${PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_BINARY_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
