@@ -1,16 +1,16 @@
 stages:
-  - checking
-  - building
+  - check
+  - build
 
 clang-format:
-  stage: checking
+  stage: check
   script:
     - git clone http://git.home.lan/root/check-clang-format.git
     - cp check-clang-format/check-clang-format.py .
     - python3 check-clang-format.py -r .
 
 gcc:
-  stage: building
+  stage: build
   before_script:
     - bash genqt.sh
   script:
@@ -24,7 +24,7 @@ gcc:
     - cmake --build .
 
 clang:
-  stage: building
+  stage: build
   before_script:
     - bash genqt.sh
   script:
